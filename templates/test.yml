@@ -1,0 +1,14 @@
+{{ testvar | to_nice_yaml }}
+------ testva1
+{{ testvar1 | to_nice_yaml }}
+{{ testvar1.number }}
+------ testva2
+{{ testvar2 | to_nice_yaml }}
+------ testva3
+{{ testvar3 | to_nice_yaml }}
+
+------ testva4
+{{ testvar4 | to_nice_yaml }}
+
+------ testva5
+{{ testvar5 | to_nice_yaml }}

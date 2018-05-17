@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars:
+    other_number: "!!str 020101805000086"
+    other_number1: !!str _020101805000086
+    testvar:
+      number: "020101805000086"
+    testvar1:
+      number: !!str "020101805000086"
+    testvar2:
+      number: !!str 020101805000086
+    testvar3:
+      number: "{{ other_number }}"
+    testvar4:
+      number: "{{ other_number1 }}"
+    testvar5:
+      number: "1020101805000086"
+  tasks:
+    - name: test
+      template:
+        src: test.yml
+        dest: "./out/"
